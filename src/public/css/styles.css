@@ -1,0 +1,14 @@
+.caja{
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+.card {
+    margin: 10px; 
+}

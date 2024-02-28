@@ -1,0 +1,17 @@
+<h1 class="position-absolute top-10 start-50 translate-middle">Productos en el carrito</h1>
+{{#if cart.products.length}}
+    <ol class="list-group list-group-numbered px-5 py-5 mx-5 my-5">
+        {{#each cart.products}}
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <p class="fw-bold">{{this.product.title}}</p>
+                    <p>Descripción: {{this.product.description}}</p>
+                    <p>Precio: ${{this.product.price}}</p>
+                </div>
+                <span class="badge text-bg-secondary rounded-pill">{{this.quantity}}</span>
+            </li>
+        {{/each}}
+    </ol>
+{{else}}
+    <p>No hay productos en el carrito</p>
+{{/if}}
